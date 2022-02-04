@@ -82,8 +82,7 @@ ID Generation
 To solve the issue of unique ID-generation across all shards are several
 approaches you should evaluate:
 
-Use GUID/UUIDs
-~~~~~~~~~~~~~~
+### Use GUID/UUIDs
 
 The most simple ID-generation mechanism for sharding are
 universally unique identifiers. These are 16-byte
@@ -99,8 +98,6 @@ At the moment Doctrine DBAL drivers MySQL and SQL Server support the generation
 of UUID/GUIDs. You can use the following bit of code to generate them across
 platforms:
 
-.. code-block:: php
-
     <?php
     use Doctrine\DBAL\DriverManager;
     use Ramsey\Uuid\Uuid;
@@ -114,8 +111,6 @@ platforms:
     ]);
 
 In your application you should hide this details in Id-Generation services:
-
-.. code-block:: php
 
     <?php
     namespace MyApplication;
@@ -133,8 +128,7 @@ In your application you should hide this details in Id-Generation services:
 A good starting point to read up on GUIDs (vs numerical ids) is this blog post
 `Coding Horror: Primary Keys: IDs vs GUIDs <http://www.codinghorror.com/blog/2007/03/primary-keys-ids-versus-guids.html>`_.
 
-Table Generator
-~~~~~~~~~~~~~~~
+### Table Generator
 
 In some scenarios there is no way around a numerical, automatically
 incrementing id. The way Auto incrementing IDs are implemented in MySQL and SQL
