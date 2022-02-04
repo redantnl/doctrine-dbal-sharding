@@ -1,0 +1,12 @@
+{
+  "name": "redant/doctrine-dbal-sharding",
+  "description": "Sharding support for Doctrine DBAL 3.x",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "doctrine/dbal": "^3.0"
+  },
+  "autoload": {
+    "psr-4": { "RedAnt\\DBALSharding\\": "src/" }
+  }
+}
